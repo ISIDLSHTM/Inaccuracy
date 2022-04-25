@@ -8,7 +8,7 @@ def _test_accuracy(n, p_vec):
     """
     Returns whether a simulated binary trial overestimated or underestimated the probability of success
     for the predicted optimal arm.
-    :param n: Number of trial individuals 
+    :param n: Number of trial individuals per arm
     :param p_vec: Vector of success probabilities
     :return: -1 if underestimated, 0 if accurate, 1 if overestimated
     """
@@ -26,7 +26,7 @@ def _test_accuracy(n, p_vec):
 def test_accuracy(n, p_vec, iters=iters):
     """
         Wrapper of _test_accuracy which simulates 'iters' trials
-        :param n: Number of trial individuals 
+        :param n: Number of trial individuals  per arm
         :param p_vec: Vector of success probabilities
         :param iters: Number of simulated trials
         :return: numpy array of -1 if underestimated, 0 if accurate, 1 if overestimated
